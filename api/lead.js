@@ -52,7 +52,11 @@ module.exports = async function handler(req, res) {
       }),
     });
 
-    if (!tg.ok) return res.status(502).json({ ok: false, error: 'telegram_failed' });
+    if (!tg.ok) {
+      let details = null;
+      try { details = await tg.json(); } catch (_) {}
+      return res.status(502).json({ ok: false, error: 'telegram_failed', telegram: details });
+    }
     return res.status(200).json({ ok: true });
   } catch (err) {
     return res.status(500).json({ ok: false, error: 'server_error' });
