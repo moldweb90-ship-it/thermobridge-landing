@@ -1,0 +1,21 @@
+{
+  "name": "ThermoBridge Germania",
+  "short_name": "ThermoBridge",
+  "description": "Locuri de muncă în Germania pentru montatori instalații sanitare și termice.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#06100e",
+  "theme_color": "#06100e",
+  "icons": [
+    {
+      "src": "/assets/favicon-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
