@@ -4,3 +4,5 @@ node_modules/
 leads.jsonl
 __pycache__/
 .env
+
+.lead_monitor_state
