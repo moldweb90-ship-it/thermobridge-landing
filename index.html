@@ -9,8 +9,8 @@
   <meta name="theme-color" content="#0a0d12">
   <link rel="canonical" href="https://thermobridge.md/">
   <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/assets/favicon-180.png">
+  <link rel="icon" href="/assets/favicon-v2.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/favicon-v2-180.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta property="og:title" content="ThermoBridge Germania | Două direcții, un drum clar">
   <meta property="og:description" content="Instalații sanitare și termice sau finisaje interioare în Köln. Vezi condițiile și aplică direct.">
@@ -23,6 +23,7 @@
   <meta name="twitter:description" content="Proiecte reale în Germania, condiții clare și aplicare directă.">
   <meta name="twitter:image" content="https://thermobridge.md/assets/hero.webp">
   <link rel="preload" href="/assets/team.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preload" href="/assets/bricolage-grotesque-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/sora-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
   <script type="application/ld+json">
   {
@@ -61,6 +62,7 @@
     @font-face{font-family:'DM Sans';font-style:normal;font-weight:400 700;font-display:swap;src:url('/assets/dm-sans-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
     @font-face{font-family:'Sora';font-style:normal;font-weight:400 700;font-display:swap;src:url('/assets/sora-latin-ext.woff2') format('woff2');unicode-range:U+0100-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1EFF,U+20A0-20CF,U+2C60-2C7F,U+A720-A7FF}
     @font-face{font-family:'Sora';font-style:normal;font-weight:400 700;font-display:swap;src:url('/assets/sora-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+    @font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/bricolage-grotesque-700.woff2') format('woff2')}
     :root{
       --ink:#0a0d12;
       --ink-2:#111722;
@@ -117,12 +119,13 @@
 
     .topbar{position:fixed;z-index:50;top:0;left:0;right:0;background:rgba(10,13,18,.78);border-bottom:1px solid rgba(255,255,255,.1);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
     .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{display:flex;align-items:center;gap:12px;color:#fff;min-width:max-content}
-    .brand-mark{width:44px;height:44px;display:grid;place-items:center;background:var(--blue);border-radius:12px;box-shadow:0 10px 24px rgba(47,107,255,.28)}
-    .brand-mark svg{width:27px;height:27px}
+    .brand{display:flex;align-items:center;gap:11px;color:#fff;min-width:max-content}
+    .brand-mark{width:46px;height:46px;display:grid;place-items:center;filter:drop-shadow(0 10px 18px rgba(36,88,214,.24))}
+    .brand-mark img{width:46px;height:46px}
     .brand-copy{display:grid;line-height:1}
-    .brand-copy b{font-family:var(--display);font-size:16px;letter-spacing:-.04em}
-    .brand-copy span{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#98a5b8;margin-top:5px}
+    .brand-copy b{font-family:'Bricolage Grotesque',var(--display);font-size:19px;letter-spacing:-.055em;line-height:.92}
+    .brand-copy b strong{font:inherit;color:#86a9ff}
+    .brand-copy>span{font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#a6afbd;margin-top:7px}
     .navlinks{display:flex;align-items:center;gap:28px;color:#b7c0cf;font-size:14px;font-weight:600}
     .navlinks a{transition:color .2s}
     .navlinks a:hover{color:#fff}
@@ -344,9 +347,9 @@
       .wrap{width:min(100% - 24px,1200px)}
       section{padding:78px 0}
       .nav{height:68px}
-      .brand-mark{width:39px;height:39px;border-radius:10px}
-      .brand-copy b{font-size:14px}
-      .brand-copy span{font-size:9px}
+      .brand-mark,.brand-mark img{width:40px;height:40px}
+      .brand-copy b{font-size:16px}
+      .brand-copy>span{font-size:8px;letter-spacing:.1em;margin-top:5px}
       .nav-phone{display:none}
       .navlinks{top:68px}
       .hero{padding:112px 0 80px}
@@ -405,10 +408,8 @@
   <header class="topbar">
     <div class="wrap nav">
       <a class="brand" href="#top">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" fill="none"><path d="M7 8h18M16 8v17M8 24c4-7 12-7 16 0" stroke="white" stroke-width="3.4" stroke-linecap="round"/></svg>
-        </span>
-        <span class="brand-copy"><b>ThermoBridge</b><span>Germania</span></span>
+        <span class="brand-mark" aria-hidden="true"><img src="assets/logo-symbol.svg" alt=""></span>
+        <span class="brand-copy"><b>Thermo<strong>Bridge</strong></b><span>Muncă în Germania</span></span>
       </a>
       <nav class="navlinks" id="navlinks" aria-label="Navigare principală">
         <a href="#posturi">Posturi</a>
