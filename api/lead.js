@@ -32,10 +32,13 @@ module.exports = async function handler(req, res) {
     const lines = [
       '🔥 Nouă aplicare ThermoBridge',
       '',
+      `Post: ${data.post || '-'}`,
       `Telefon: ${data.telefon || data.phone || '-'}`,
       `Nume: ${data.nume || '-'}`,
       `Experiență: ${data.experienta || '-'}`,
+      `Specializare: ${data.specializare || '-'}`,
       `Permis B: ${data.permis || '-'}`,
+      `Mesaj: ${data.mesaj || '-'}`,
       `Formular: ${data.form_type || '-'}`,
       `Pagina: ${data.page || '-'}`,
       `IP: ${req.headers['x-forwarded-for'] || req.socket?.remoteAddress || '-'}`,
